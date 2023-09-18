@@ -14,10 +14,9 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('content');
-            $table->string('image')->nullable();
-            $table->unsignedInteger('likes')->nullable();
-            $table->boolean('is_published')->default(false);
+            $table->text('description');
+            $table->string('preview');
+            $table->text('thumbnail')->nullable();
             $table->timestamps();
         });
     }
